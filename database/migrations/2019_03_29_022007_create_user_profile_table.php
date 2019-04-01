@@ -19,7 +19,7 @@ class CreateUserProfileTable extends Migration
             $table->string('first_name');
             $table->string('last_name');
             $table->text('address');
-            $table->integer('phone_number');
+            $table->string('phone_number');
             $table->timestamps();
         });
     }
