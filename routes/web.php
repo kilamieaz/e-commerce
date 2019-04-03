@@ -11,15 +11,22 @@
 |
 */
 
+Auth::routes();
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/admin', function () {
-    return view('admin.index');
+Route::prefix('admin')->group(function () {
+    Route::get('dashboard', function () {
+        return view('admin.index');
+    });
+    Route::resource('user', 'Admin\UserController');
 });
 
-Auth::routes();
+Route::prefix('datatable')->group(function () {
+    Route::get('user', 'Datatable\UserDataTableController@index')->name('datatable.users');
+});
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/signin', function () {
