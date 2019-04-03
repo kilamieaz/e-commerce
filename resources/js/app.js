@@ -5,11 +5,10 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
-require('startbootstrap-sb-admin-2/js/sb-admin-2');
-
 require('startbootstrap-sb-admin-2/vendor/jquery/jquery.min.js');
+require('./bootstrap');
 require('startbootstrap-sb-admin-2/vendor/jquery-easing/jquery.easing.min.js');
+require('startbootstrap-sb-admin-2/js/sb-admin-2');
 
 require('startbootstrap-sb-admin-2/vendor/chart.js/Chart.min.js');
 require('startbootstrap-sb-admin-2/js/demo/chart-area-demo.js');
