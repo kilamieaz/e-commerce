@@ -4,9 +4,11 @@
 
 @component('components.table', ['table_id' => $table_id])
     @slot('thead')
+            <th>No</th>
         @foreach($columns as $column)
             <th>{{ $column['header'] }}</th>
         @endforeach
+            <th>Action</th>
     @endslot
 @endcomponent
 
@@ -15,14 +17,11 @@
     <script type="text/javascript">
         $(document).ready( function () {
             $("#{{$table_id}}").DataTable({
-                processing: true,
-                serverSide: true,
-                ajax: '{!! route($route_name) !!}',
-                columns: [
-                    @foreach($columns as $column)
-                        { data: '{{ $column['data'] }}', name: '{{ $column['name'] }}' },
-                    @endforeach
-                ]
+                "processing": true,
+                "ajax":{ 
+                    'url': '{!! route($route_name) !!}',
+                    "type" : "GET" 
+                }
             });
         });
     </script>
