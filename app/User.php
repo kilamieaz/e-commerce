@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Carbon\Carbon;
 
 class User extends Authenticatable
 {
@@ -65,5 +66,10 @@ class User extends Authenticatable
     public function wishlists()
     {
         return $this->hasMany(Wishlist::class);
+    }
+
+    public function getCreatedAtAttribute()
+    {
+        return Carbon::parse($this->attributes['created_at'])->diffForHumans();
     }
 }
