@@ -61,7 +61,7 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        //
+        echo json_encode($user);
     }
 
     /**
@@ -73,7 +73,8 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //
+        // dd($user);
+        $user->update($request->only('email'));
     }
 
     /**

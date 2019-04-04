@@ -32,8 +32,8 @@
 'modal_id' => 'input-user-modal',
 'modal_header' => 'User',
 'inputs' => [
-['name' => 'email', 'type' => 'text' , 'value' => '', 'header' => 'Email'],
-['name' => 'password', 'type' => 'password', 'value' => '', 'header' => 'Password'],
+['name' => 'email', 'type' => 'text' , 'value' => '', 'header' => 'Email', 'label_id' => 'label_email'],
+['name' => 'password', 'type' => 'password', 'value' => '', 'header' => 'Password', 'label_id' => 'label_password'],
 ]
 ])
 @endcomponent
@@ -76,7 +76,28 @@
         $('.modal-title').text('Add User');
     }
 
-    
+    function editForm(id) {
+        save_method = "edit";
+        $('input[name=_method]').val('PATCH');
+        // console.log($('input[name=_method]'))
+        $('#input-user-modal form')[0].reset();
+        $.ajax({
+            url: "user/" + id + "/edit",
+            type: "GET",
+            dataType: "JSON",
+            success: function (data) {
+                $('#input-user-modal').modal('show');
+                $('.modal-title').text('Edit User');
+                $('#id_hidden').val(data.id);
+                $('#email').val(data.email);
+                $('#password,#label_password').hide();
+
+            },
+            error: function () {
+                alert("Tidak dapat menampilkan data!");
+            }
+        });
+    }
 
 </script>
 @endpush

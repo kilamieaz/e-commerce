@@ -5,8 +5,8 @@
             @slot('input')
             @foreach($inputs as $input)
             <div class="form-group">
-                <label for="{{ $input['name'] }}" class="col-form-label">{{ $input['header'] }}</label>
-                <input type="{{ $input['type'] }}" class="form-control" name="{{ $input['name'] }}">
+                <label for="{{ $input['name'] }}" class="col-form-label" id="{{ $input['label_id'] }}">{{ $input['header'] }}</label>
+                <input type="{{ $input['type'] }}" class="form-control" id="{{ $input['name'] }}" name="{{ $input['name'] }}">
             </div>
             @endforeach
             @endslot
