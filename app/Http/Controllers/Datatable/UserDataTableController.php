@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Datatable;
 
 use App\Http\Controllers\Controller;
-use Yajra\DataTables\DataTables;
 use App\User;
 
 class UserDataTableController extends Controller
@@ -11,7 +10,19 @@ class UserDataTableController extends Controller
     public function index()
     {
         $users = User::all();
-        return DataTables::of($users)->make(true);
-        // return Datatables::of(User::query())->make(true);
+        $data = [];
+        foreach ($users as $index => $list) {
+            $row = [];
+            $row[] = ++$index;
+            $row[] = $list->email;
+            $row[] = $list->created_at;
+            $row[] = '<div class="text-center"><div class="btn-group">
+               <button type="button" onclick="editForm(' . $list->id . ')" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></button>
+               <button type="button" onclick="deleteData(' . $list->id . ')" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button></div></div>';
+            $data[] = $row;
+        }
+
+        $output = ['data' => $data];
+        return response()->json($output);
     }
 }
