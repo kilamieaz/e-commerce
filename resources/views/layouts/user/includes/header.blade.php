@@ -30,13 +30,13 @@
       <nav class="navigation">
         <div class="container-fluid">
           <div class="navigation__column left">
-            <div class="header__logo"><a class="ps-logo" href="index.html"><img src="{{ asset('images/logo.png') }}" alt=""></a></div>
+            <div class="header__logo"><a class="ps-logo" href="/user"><img src="{{ asset('images/logo.png') }}" alt=""></a></div>
           </div>
           <div class="navigation__column center">
                 <ul class="main-menu menu">
-                  <li class="menu-item menu-item-has-children dropdown"><a href="index.html">Home</a>
+                  <li class="menu-item menu-item-has-children dropdown"><a href="/user">Home</a>
                         <ul class="sub-menu">
-                          <li class="menu-item"><a href="index.html">Homepage #1</a></li>
+                          <li class="menu-item"><a href="/user">Homepage #1</a></li>
                           <li class="menu-item"><a href="#">Homepage #2</a></li>
                           <li class="menu-item"><a href="#">Homepage #3</a></li>
                         </ul>
@@ -46,58 +46,58 @@
                       <div class="mega-wrap">
                         <div class="mega-column">
                           <ul class="mega-item mega-features">
-                            <li><a href="product-listing.html">NEW RELEASES</a></li>
-                            <li><a href="product-listing.html">FEATURES SHOES</a></li>
-                            <li><a href="product-listing.html">BEST SELLERS</a></li>
-                            <li><a href="product-listing.html">NOW TRENDING</a></li>
-                            <li><a href="product-listing.html">SUMMER ESSENTIALS</a></li>
-                            <li><a href="product-listing.html">MOTHER'S DAY COLLECTION</a></li>
-                            <li><a href="product-listing.html">FAN GEAR</a></li>
+                            <li><a href="product-listing">NEW RELEASES</a></li>
+                            <li><a href="product-listing">FEATURES SHOES</a></li>
+                            <li><a href="product-listing">BEST SELLERS</a></li>
+                            <li><a href="product-listing">NOW TRENDING</a></li>
+                            <li><a href="product-listing">SUMMER ESSENTIALS</a></li>
+                            <li><a href="product-listing">MOTHER'S DAY COLLECTION</a></li>
+                            <li><a href="product-listing">FAN GEAR</a></li>
                           </ul>
                         </div>
                         <div class="mega-column">
                           <h4 class="mega-heading">Shoes</h4>
                           <ul class="mega-item">
-                            <li><a href="product-listing.html">All Shoes</a></li>
-                            <li><a href="product-listing.html">Running</a></li>
-                            <li><a href="product-listing.html">Training & Gym</a></li>
-                            <li><a href="product-listing.html">Basketball</a></li>
-                            <li><a href="product-listing.html">Football</a></li>
-                            <li><a href="product-listing.html">Soccer</a></li>
-                            <li><a href="product-listing.html">Baseball</a></li>
+                            <li><a href="product-listing">All Shoes</a></li>
+                            <li><a href="product-listing">Running</a></li>
+                            <li><a href="product-listing">Training & Gym</a></li>
+                            <li><a href="product-listing">Basketball</a></li>
+                            <li><a href="product-listing">Football</a></li>
+                            <li><a href="product-listing">Soccer</a></li>
+                            <li><a href="product-listing">Baseball</a></li>
                           </ul>
                         </div>
                         <div class="mega-column">
                           <h4 class="mega-heading">CLOTHING</h4>
                           <ul class="mega-item">
-                            <li><a href="product-listing.html">Compression & Nike Pro</a></li>
-                            <li><a href="product-listing.html">Tops & T-Shirts</a></li>
-                            <li><a href="product-listing.html">Polos</a></li>
-                            <li><a href="product-listing.html">Hoodies & Sweatshirts</a></li>
-                            <li><a href="product-listing.html">Jackets & Vests</a></li>
-                            <li><a href="product-listing.html">Pants & Tights</a></li>
-                            <li><a href="product-listing.html">Shorts</a></li>
+                            <li><a href="product-listing">Compression & Nike Pro</a></li>
+                            <li><a href="product-listing">Tops & T-Shirts</a></li>
+                            <li><a href="product-listing">Polos</a></li>
+                            <li><a href="product-listing">Hoodies & Sweatshirts</a></li>
+                            <li><a href="product-listing">Jackets & Vests</a></li>
+                            <li><a href="product-listing">Pants & Tights</a></li>
+                            <li><a href="product-listing">Shorts</a></li>
                           </ul>
                         </div>
                         <div class="mega-column">
                           <h4 class="mega-heading">Accessories</h4>
                           <ul class="mega-item">
-                            <li><a href="product-listing.html">Compression & Nike Pro</a></li>
-                            <li><a href="product-listing.html">Tops & T-Shirts</a></li>
-                            <li><a href="product-listing.html">Polos</a></li>
-                            <li><a href="product-listing.html">Hoodies & Sweatshirts</a></li>
-                            <li><a href="product-listing.html">Jackets & Vests</a></li>
-                            <li><a href="product-listing.html">Pants & Tights</a></li>
-                            <li><a href="product-listing.html">Shorts</a></li>
+                            <li><a href="product-listing">Compression & Nike Pro</a></li>
+                            <li><a href="product-listing">Tops & T-Shirts</a></li>
+                            <li><a href="product-listing">Polos</a></li>
+                            <li><a href="product-listing">Hoodies & Sweatshirts</a></li>
+                            <li><a href="product-listing">Jackets & Vests</a></li>
+                            <li><a href="product-listing">Pants & Tights</a></li>
+                            <li><a href="product-listing">Shorts</a></li>
                           </ul>
                         </div>
                         <div class="mega-column">
                           <h4 class="mega-heading">BRAND</h4>
                           <ul class="mega-item">
-                            <li><a href="product-listing.html">NIKE</a></li>
-                            <li><a href="product-listing.html">Adidas</a></li>
-                            <li><a href="product-listing.html">Dior</a></li>
-                            <li><a href="product-listing.html">B&G</a></li>
+                            <li><a href="product-listing">NIKE</a></li>
+                            <li><a href="product-listing">Adidas</a></li>
+                            <li><a href="product-listing">Dior</a></li>
+                            <li><a href="product-listing">B&G</a></li>
                           </ul>
                         </div>
                       </div>
@@ -133,20 +133,20 @@
               <div class="ps-cart__listing">
                 <div class="ps-cart__content">
                   <div class="ps-cart-item"><a class="ps-cart-item__close" href="#"></a>
-                    <div class="ps-cart-item__thumbnail"><a href="product-detail.html"></a><img src="{{ asset('images/cart-preview/1.jpg') }}" alt=""></div>
-                    <div class="ps-cart-item__content"><a class="ps-cart-item__title" href="product-detail.html">Amazin’ Glazin’</a>
+                    <div class="ps-cart-item__thumbnail"><a href="product-detail"></a><img src="{{ asset('images/cart-preview/1.jpg') }}" alt=""></div>
+                    <div class="ps-cart-item__content"><a class="ps-cart-item__title" href="product-detail">Amazin’ Glazin’</a>
                       <p><span>Quantity:<i>12</i></span><span>Total:<i>£176</i></span></p>
                     </div>
                   </div>
                   <div class="ps-cart-item"><a class="ps-cart-item__close" href="#"></a>
-                    <div class="ps-cart-item__thumbnail"><a href="product-detail.html"></a><img src="{{ asset('images/cart-preview/2.jpg') }}" alt=""></div>
-                    <div class="ps-cart-item__content"><a class="ps-cart-item__title" href="product-detail.html">The Crusty Croissant</a>
+                    <div class="ps-cart-item__thumbnail"><a href="product-detail"></a><img src="{{ asset('images/cart-preview/2.jpg') }}" alt=""></div>
+                    <div class="ps-cart-item__content"><a class="ps-cart-item__title" href="product-detail">The Crusty Croissant</a>
                       <p><span>Quantity:<i>12</i></span><span>Total:<i>£176</i></span></p>
                     </div>
                   </div>
                   <div class="ps-cart-item"><a class="ps-cart-item__close" href="#"></a>
-                    <div class="ps-cart-item__thumbnail"><a href="product-detail.html"></a><img src="{{ asset('images/cart-preview/3.jpg') }}" alt=""></div>
-                    <div class="ps-cart-item__content"><a class="ps-cart-item__title" href="product-detail.html">The Rolling Pin</a>
+                    <div class="ps-cart-item__thumbnail"><a href="product-detail"></a><img src="{{ asset('images/cart-preview/3.jpg') }}" alt=""></div>
+                    <div class="ps-cart-item__content"><a class="ps-cart-item__title" href="product-detail">The Rolling Pin</a>
                       <p><span>Quantity:<i>12</i></span><span>Total:<i>£176</i></span></p>
                     </div>
                   </div>
@@ -155,7 +155,7 @@
                   <p>Number of items:<span>36</span></p>
                   <p>Item Total:<span>£528.00</span></p>
                 </div>
-                <div class="ps-cart__footer"><a class="ps-btn" href="cart.html">Check out<i class="ps-icon-arrow-left"></i></a></div>
+                <div class="ps-cart__footer"><a class="ps-btn" href="cart">Check out<i class="ps-icon-arrow-left"></i></a></div>
               </div>
             </div>
             <div class="menu-toggle"><span></span></div>
