@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Datatable;
 
 use App\Product;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Category;
+use Illuminate\Support\Facades\Storage;
 
-class ProductController extends Controller
+class ProductDataTableController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +16,25 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $categories = Category::all();
-        return view('admin.product.index', compact('categories'));
+        $product = Product::all();
+        $data = [];
+        foreach ($product as $index => $list) {
+            $row = [];
+            $row[] = ++$index;
+            $row[] = $list->name;
+            $row[] = $list->category->name;
+            $row[] = $list->description;
+            $row[] = '<div class="text-center"><img style="height:50px; width:50px" src="' . Storage::url($list->image) . '"></div>';
+            $row[] = $list->price;
+            $row[] = $list->stock;
+            $row[] = '<div class="text-center"><div class="btn-group">
+               <button type="button" onclick="editForm(' . $list->id . ')" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></button>
+               <button type="button" onclick="deleteData(' . $list->id . ')" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button></div></div>';
+            $data[] = $row;
+        }
+
+        $output = ['data' => $data];
+        return response()->json($output);
     }
 
     /**
@@ -38,17 +55,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        $uploadedFile = $request->file('image');
-        $path = $uploadedFile->store('public/files');
-        $category = Product::create([
-            'category_id' => $request->category,
-            'name' => $request->name,
-            'description' => $request->description,
-            'image' => $path,
-            'price' => $request->price,
-            'stock' => $request->stock,
-            'status' => 1,
-        ]);
+        //
     }
 
     /**
