@@ -45,7 +45,6 @@
     $(document).ready(function () {
         var table = $('#user-datatable').DataTable();
         $('#input-user-modal form').on('submit', function (e) {
-            // console.log('here');
             if (!e.isDefaultPrevented()) {
                 var id = $('#id_hidden').val();
                 if (save_method == "add") url = "{{ route('user.store') }}";
