@@ -20,7 +20,7 @@
                 "processing": true,
                 "ajax":{ 
                     'url': '{!! route($route_name) !!}',
-                    "type" : "GET" 
+                    "type" : "GET",
                 }
             });
         });
