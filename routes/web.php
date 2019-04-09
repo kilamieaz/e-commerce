@@ -22,10 +22,12 @@ Route::prefix('admin')->group(function () {
         return view('admin.index');
     });
     Route::resource('user', 'Admin\UserController');
+    Route::resource('category', 'Admin\CategoryController');
 });
 
 Route::prefix('datatable')->group(function () {
-    Route::get('user', 'Datatable\UserDataTableController@index')->name('datatable.users');
+    Route::get('user-datatable', 'Datatable\UserDataTableController@index')->name('datatable.users');
+    Route::get('category-datatable', 'Datatable\CategoryDataTableController@index')->name('datatable.category');
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
