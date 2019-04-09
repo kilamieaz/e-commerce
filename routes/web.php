@@ -23,11 +23,13 @@ Route::prefix('admin')->group(function () {
     });
     Route::resource('user', 'Admin\UserController');
     Route::resource('category', 'Admin\CategoryController');
+    Route::resource('product', 'Admin\ProductController');
 });
 
 Route::prefix('datatable')->group(function () {
     Route::get('user-datatable', 'Datatable\UserDataTableController@index')->name('datatable.users');
     Route::get('category-datatable', 'Datatable\CategoryDataTableController@index')->name('datatable.category');
+    Route::get('product-datatable', 'Datatable\ProductDataTableController@index')->name('datatable.product');
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
