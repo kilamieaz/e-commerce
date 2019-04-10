@@ -16,7 +16,7 @@
                 <label for="{{ $input['name'] }}" id="{{ $input['label_id'] }}">{{ $input['header'] }}</label>
                 <select class="form-control" id="{{ $input['name'] }}" name="{{ $input['name'] }}">
                     @foreach ($input['value'] as $item)
-                        <option value="{{ $item->id }}">{{$item->name}}</option>
+                        <option value="{{ $item->id }}">{{ $item->selectName() }}</option>
                     @endforeach
                 </select>
             </div>
