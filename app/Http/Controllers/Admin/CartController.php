@@ -77,10 +77,10 @@ class CartController extends Controller
      */
     public function update(Request $request, Cart $cart)
     {
-        $cart->updateOrCreate([
-            'user_id' => $request->user_id,
-            'product_id' => $request->product_id,
-        ]);
+        $carts = Cart::where('user_id', '=', $request->user_id)->where('product_id', '=', $request->product_id)->first();
+        if (!$carts) {
+            $cart->update($request->all());
+        }
     }
 
     /**
