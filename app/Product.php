@@ -38,4 +38,9 @@ class Product extends Model
     {
         return $this->hasMany(Wishlist::class);
     }
+
+    public function selectName()
+    {
+        return $this->name;
+    }
 }

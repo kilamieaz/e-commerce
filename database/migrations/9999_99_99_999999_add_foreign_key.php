@@ -38,6 +38,11 @@ class AddForeignKey extends Migration
             $table->foreign('product_id')->references('id')->on('product')->onDelete('cascade');
         });
 
+        Schema::table('wishlist', function (Blueprint $table) {
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('product_id')->references('id')->on('product')->onDelete('cascade');
+        });
+
         Schema::table('reply', function (Blueprint $table) {
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('product_id')->references('id')->on('product')->onDelete('cascade');

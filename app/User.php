@@ -72,4 +72,9 @@ class User extends Authenticatable
     {
         return Carbon::parse($this->attributes['created_at'])->diffForHumans();
     }
+
+    public function selectName()
+    {
+        return $this->email;
+    }
 }
