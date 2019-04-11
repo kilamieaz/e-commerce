@@ -14,7 +14,12 @@ class Category extends Model
         return $this->hasMany(Product::class);
     }
 
-    public function selectName()
+    public function selectValue()
+    {
+        return $this->id;
+    }
+
+    public function selectText()
     {
         return $this->name;
     }

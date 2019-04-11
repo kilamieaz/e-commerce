@@ -39,7 +39,12 @@ class Product extends Model
         return $this->hasMany(Wishlist::class);
     }
 
-    public function selectName()
+    public function selectValue()
+    {
+        return $this->id;
+    }
+
+    public function selecText()
     {
         return $this->name;
     }
