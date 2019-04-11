@@ -70,7 +70,7 @@
                     });
                     return false;
                 } else {
-                    alert("You Can't");
+                    alert("You Can't!");
                     return false;
                 }
             }

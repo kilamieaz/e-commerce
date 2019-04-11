@@ -44,7 +44,7 @@ class Product extends Model
         return $this->id;
     }
 
-    public function selecText()
+    public function selectText()
     {
         return $this->name;
     }

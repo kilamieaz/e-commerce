@@ -24,4 +24,14 @@ class Comment extends Model
     {
         return $this->hasMany(Reply::class);
     }
+
+    public function selectValue()
+    {
+        return $this->id;
+    }
+
+    public function selectText()
+    {
+        return $this->description;
+    }
 }
