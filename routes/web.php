@@ -26,6 +26,7 @@ Route::prefix('admin')->group(function () {
     Route::resource('product', 'Admin\ProductController');
     Route::resource('cart', 'Admin\CartController');
     Route::resource('wishlist', 'Admin\WishlistController');
+    Route::resource('comment', 'Admin\CommentController');
 });
 
 Route::prefix('datatable')->group(function () {
@@ -34,6 +35,7 @@ Route::prefix('datatable')->group(function () {
     Route::get('product-datatable', 'Datatable\ProductDataTableController@index')->name('datatable.product');
     Route::get('cart-datatable', 'Datatable\CartDataTableController@index')->name('datatable.cart');
     Route::get('wishlist-datatable', 'Datatable\WishlistDataTableController@index')->name('datatable.wishlist');
+    Route::get('comment-datatable', 'Datatable\CommentDataTableController@index')->name('datatable.comment');
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
