@@ -41,7 +41,7 @@
 ['name' => 'description', 'type' => 'text', 'value' => '', 'header' => 'Description', 'label_id' => 'product_label_description'],
 ['name' => 'image', 'type' => 'file', 'value' => '', 'header' => 'Image', 'label_id' => 'product_label_image'],
 ['name' => 'price', 'type' => 'number', 'value' => '', 'header' => 'price', 'label_id' => 'product_label_price'],
-['name' => 'stock', 'type' => 'text', 'value' => '', 'header' => 'stock', 'label_id' => 'product_label_stock'],
+['name' => 'stock', 'type' => 'number', 'value' => '', 'header' => 'stock', 'label_id' => 'product_label_stock'],
 ]
 ])
 @endcomponent

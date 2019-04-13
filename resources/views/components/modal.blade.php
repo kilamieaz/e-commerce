@@ -4,7 +4,7 @@
             @component('components.form')
             @slot('input')
             @foreach($inputs as $input)
-            @if ($input['type'] == 'text')
+            @if ($input['type'] == 'text' || $input['type'] == 'number')
             <div class="form-group">
                 <label for="{{ $input['name'] }}" class="col-form-label"
                     id="{{ $input['label_id'] }}">{{ $input['header'] }}</label>
