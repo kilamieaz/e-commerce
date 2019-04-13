@@ -28,6 +28,7 @@ Route::prefix('admin')->group(function () {
     Route::resource('wishlist', 'Admin\WishlistController');
     Route::resource('comment', 'Admin\CommentController');
     Route::resource('reply', 'Admin\ReplyController');
+    Route::resource('transaction', 'Admin\TransactionController');
 });
 
 Route::prefix('datatable')->group(function () {
@@ -38,6 +39,7 @@ Route::prefix('datatable')->group(function () {
     Route::get('wishlist-datatable', 'Datatable\WishlistDataTableController@index')->name('datatable.wishlist');
     Route::get('comment-datatable', 'Datatable\CommentDataTableController@index')->name('datatable.comment');
     Route::get('reply-datatable', 'Datatable\ReplyDataTableController@index')->name('datatable.reply');
+    Route::get('transaction-datatable', 'Datatable\TransactionDataTableController@index')->name('datatable.transaction');
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
