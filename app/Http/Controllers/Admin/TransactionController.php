@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\User;
+use App\Product;
+use App\Transaction;
 
-class UserController extends Controller
+class TransactionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +17,9 @@ class UserController extends Controller
      */
     public function index()
     {
-        return view('admin.user.index');
+        $users = User::all();
+        $products = Product::all();
+        return view('admin.transaction.index', compact('users', 'products'));
     }
 
     /**
@@ -36,9 +40,12 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        User::create([
-            'email' => $request['email'],
-            'password' => bcrypt($request['password']),
+        $transaction = Transaction::create([
+            'user_id' => $request->user_id,
+            'product_id' => $request->product_id,
+            'total' => $request->total,
+            'quantity' => $request->quantity,
+            'status' => 1,
         ]);
     }
 
@@ -59,9 +66,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $user)
+    public function edit(Transaction $transaction)
     {
-        echo json_encode($user);
+        echo json_encode($transaction);
     }
 
     /**
@@ -71,10 +78,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
+    public function update(Request $request, Transaction $transaction)
     {
-        // dd($user);
-        $user->update($request->only('email'));
+        $transaction->update($request->all());
     }
 
     /**
@@ -83,8 +89,8 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(User $user)
+    public function destroy(Transaction $transaction)
     {
-        //
+        $transaction->delete();
     }
 }
