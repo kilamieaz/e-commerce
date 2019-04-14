@@ -18,8 +18,12 @@
             'table_id' => 'user-datatable',
             'route_name' => 'datatable.users',
             'columns' => [
-            ['data' => 'email', 'name' => 'email', 'header' => 'Email'],
-            ['data' => 'created_at', 'name' => 'created_at', 'header' => 'Created.'],
+            ['header' => 'First Name'],
+            ['header' => 'Last Name'],
+            ['header' => 'Email'],
+            ['header' => 'Address'],
+            ['header' => 'Phone Number'],
+            ['header' => 'Created.'],
             ]
             ])
             @endcomponent
@@ -32,8 +36,12 @@
 'modal_id' => 'input-user-modal',
 'modal_header' => 'User',
 'inputs' => [
-['name' => 'email', 'type' => 'text' , 'value' => '', 'header' => 'Email', 'label_id' => 'label_email'],
-['name' => 'password', 'type' => 'password', 'value' => '', 'header' => 'Password', 'label_id' => 'label_password'],
+['name' => 'first_name', 'type' => 'text' , 'value' => '', 'header' => 'First Name', 'label_id' => 'user_label_firstname'],
+['name' => 'last_name', 'type' => 'text' , 'value' => '', 'header' => 'Last Name', 'label_id' => 'user_label_lastname'],
+['name' => 'email', 'type' => 'text' , 'value' => '', 'header' => 'Email', 'label_id' => 'user_label_email'],
+['name' => 'password', 'type' => 'password', 'value' => '', 'header' => 'Password', 'label_id' => 'user_label_password'],
+['name' => 'address', 'type' => 'text' , 'value' => '', 'header' => 'Address', 'label_id' => 'user_label_address'],
+['name' => 'phone_number', 'type' => 'text' , 'value' => '', 'header' => 'Phone Number', 'label_id' => 'user_label_phone'],
 ]
 ])
 @endcomponent
@@ -78,7 +86,6 @@
     function editForm(id) {
         save_method = "edit";
         $('input[name=_method]').val('PATCH');
-        // console.log($('input[name=_method]'))
         $('#input-user-modal form')[0].reset();
         $.ajax({
             url: "user/" + id + "/edit",
@@ -88,6 +95,10 @@
                 $('#input-user-modal').modal('show');
                 $('.modal-title').text('Edit User');
                 $('#id_hidden').val(data.id);
+                $('#first_name').val(data.user_profile.first_name);
+                $('#last_name').val(data.user_profile.last_name);
+                $('#address').val(data.user_profile.address);
+                $('#phone_number').val(data.user_profile.phone_number);
                 $('#email').val(data.email);
                 $('#password,#label_password').hide();
 

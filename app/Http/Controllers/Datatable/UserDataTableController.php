@@ -14,7 +14,11 @@ class UserDataTableController extends Controller
         foreach ($users as $index => $list) {
             $row = [];
             $row[] = ++$index;
+            $row[] = $list->userProfile->first_name;
+            $row[] = $list->userProfile->last_name;
             $row[] = $list->email;
+            $row[] = $list->userProfile->address;
+            $row[] = $list->userProfile->phone_number;
             $row[] = $list->created_at;
             $row[] = '<div class="text-center"><div class="btn-group">
                <button type="button" onclick="editForm(' . $list->id . ')" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></button>

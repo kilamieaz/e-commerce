@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\User;
+use App\UserProfile;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -36,9 +37,16 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        User::create([
+        $user = User::create([
             'email' => $request['email'],
             'password' => bcrypt($request['password']),
+        ]);
+        $userProfile = UserProfile::create([
+            'user_id' => $user->id,
+            'first_name' => $request['first_name'],
+            'last_name' => $request['last_name'],
+            'address' => $request['address'],
+            'phone_number' => $request['phone_number'],
         ]);
     }
 
@@ -73,8 +81,14 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        // dd($user);
         $user->update($request->only('email'));
+        $userProfile = UserProfile::where('user_id', '=', $user->id)->first();
+        $userProfile->update([
+            'first_name' => $request['first_name'],
+            'last_name' => $request['last_name'],
+            'address' => $request['address'],
+            'phone_number' => $request['phone_number'],
+        ]);
     }
 
     /**
