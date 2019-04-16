@@ -49,3 +49,22 @@ Route::get('/signin', function () {
 Route::get('/signup', function () {
     return view('Register.register');
 });
+
+Route::get('/index', function () {
+    return view('user.index');
+});
+Route::get('/checkout', function () {
+    return view('user.checkout');
+});
+Route::get('/cart', function () {
+    return view('user.cart');
+});
+Route::get('/product-detail', function () {
+    return view('user.product-detail');
+});
+Route::get('/product-listing', function () {
+    return view('user.product-listing');
+});
+Route::get('/wishlist', function () {
+    return view('user.wishlist');
+});
