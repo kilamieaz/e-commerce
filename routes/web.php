@@ -44,10 +44,10 @@ Route::prefix('datatable')->group(function () {
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/signin', function () {
-    return view('Login.login');
+    return view('login.login');
 });
 Route::get('/signup', function () {
-    return view('Register.register');
+    return view('register.register');
 });
 
 Route::get('/index', function () {
