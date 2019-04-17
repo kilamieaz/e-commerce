@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Please SignIn</title>
-    <link rel="stylesheet" href="/css/reset.min.css">
+    <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/auth.css">
 </head>
 
