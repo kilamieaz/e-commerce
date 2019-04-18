@@ -23,6 +23,7 @@ Route::prefix('admin')->group(function () {
     });
     Route::resource('user', 'Admin\UserController');
     Route::resource('category', 'Admin\CategoryController');
+    Route::resource('subcategory', 'Admin\SubCategoryController');
     Route::resource('product', 'Admin\ProductController');
     Route::resource('cart', 'Admin\CartController');
     Route::resource('wishlist', 'Admin\WishlistController');
@@ -34,6 +35,7 @@ Route::prefix('admin')->group(function () {
 Route::prefix('datatable')->group(function () {
     Route::get('user-datatable', 'Datatable\UserDataTableController@index')->name('datatable.users');
     Route::get('category-datatable', 'Datatable\CategoryDataTableController@index')->name('datatable.category');
+    Route::get('sub-category-datatable', 'Datatable\SubCategoryDataTableController@index')->name('datatable.subcategory');
     Route::get('product-datatable', 'Datatable\ProductDataTableController@index')->name('datatable.product');
     Route::get('cart-datatable', 'Datatable\CartDataTableController@index')->name('datatable.cart');
     Route::get('wishlist-datatable', 'Datatable\WishlistDataTableController@index')->name('datatable.wishlist');
@@ -42,17 +44,15 @@ Route::prefix('datatable')->group(function () {
     Route::get('transaction-datatable', 'Datatable\TransactionDataTableController@index')->name('datatable.transaction');
 });
 
-Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/signin', function () {
     return view('login.login');
-});
+})->name('signin');
 Route::get('/signup', function () {
     return view('register.register');
-});
+})->name('signup');
 
-Route::get('/index', function () {
-    return view('user.index');
-});
+Route::resource('home', 'User\HomeController');
+
 Route::get('/checkout', function () {
     return view('user.checkout');
 });
