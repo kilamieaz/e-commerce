@@ -48,6 +48,10 @@ class AddForeignKey extends Migration
             $table->foreign('product_id')->references('id')->on('product')->onDelete('cascade');
             $table->foreign('comment_id')->references('id')->on('comment')->onDelete('cascade');
         });
+
+        Schema::table('category', function (Blueprint $table) {
+            $table->foreign('parent_id')->references('id')->on('category')->onDelete('cascade');
+        });
     }
 
     /**
