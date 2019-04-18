@@ -14,25 +14,25 @@
               </thead>
               <tbody>
                 <tr>
-                  <td><a class="ps-product__preview" href="product-detail.html"><img class="mr-15" src="images/product/cart-preview/1.jpg" alt=""> air jordan One mid</a></td>
+                  <td><a class="ps-product__preview" href="product-detail"><img class="mr-15" src="images/product/cart-preview/1.jpg" alt=""> air jordan One mid</a></td>
                   <td>$150</td>
-                  <td><a class="ps-product-link" href="product-detail.html">View Product</a></td>
+                  <td><a class="ps-product-link" href="product-detail">View Product</a></td>
                   <td>
                     <div class="ps-remove"></div>
                   </td>
                 </tr>
                 <tr>
-                  <td><a class="ps-product__preview" href="product-detail.html"><img class="mr-15" src="images/product/cart-preview/2.jpg" alt=""> The Crusty Croissant</a></td>
+                  <td><a class="ps-product__preview" href="product-detail"><img class="mr-15" src="images/product/cart-preview/2.jpg" alt=""> The Crusty Croissant</a></td>
                   <td>$150</td>
-                  <td><a class="ps-product-link" href="product-detail.html">View Product</a></td>
+                  <td><a class="ps-product-link" href="product-detail">View Product</a></td>
                   <td>
                     <div class="ps-remove"></div>
                   </td>
                 </tr>
                 <tr>
-                  <td><a class="ps-product__preview" href="product-detail.html"><img class="mr-15" src="images/product/cart-preview/3.jpg" alt="">The Rolling Pin</a></td>
+                  <td><a class="ps-product__preview" href="product-detail"><img class="mr-15" src="images/product/cart-preview/3.jpg" alt="">The Rolling Pin</a></td>
                   <td>$150</td>
-                  <td><a class="ps-product-link" href="product-detail.html">View Product</a></td>
+                  <td><a class="ps-product-link" href="product-detail">View Product</a></td>
                   <td>
                     <div class="ps-remove"></div>
                   </td>

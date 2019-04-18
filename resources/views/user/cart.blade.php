@@ -15,7 +15,7 @@
               </thead>
               <tbody>
                 <tr>
-                  <td><a class="ps-product__preview" href="product-detail.html"><img class="mr-15" src="images/product/cart-preview/1.jpg" alt=""> air jordan One mid</a></td>
+                  <td><a class="ps-product__preview" href="product-detail"><img class="mr-15" src="images/product/cart-preview/1.jpg" alt=""> air jordan One mid</a></td>
                   <td>$150</td>
                   <td>
                     <div class="form-group--number">
@@ -30,7 +30,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <td><a class="ps-product__preview" href="product-detail.html"><img class="mr-15" src="images/product/cart-preview/2.jpg" alt=""> The Crusty Croissant</a></td>
+                  <td><a class="ps-product__preview" href="product-detail"><img class="mr-15" src="images/product/cart-preview/2.jpg" alt=""> The Crusty Croissant</a></td>
                   <td>$150</td>
                   <td>
                     <div class="form-group--number">
@@ -45,7 +45,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <td><a class="ps-product__preview" href="product-detail.html"><img class="mr-15" src="images/product/cart-preview/3.jpg" alt="">The Rolling Pin</a></td>
+                  <td><a class="ps-product__preview" href="product-detail"><img class="mr-15" src="images/product/cart-preview/3.jpg" alt="">The Rolling Pin</a></td>
                   <td>$150</td>
                   <td>
                     <div class="form-group--number">
@@ -73,7 +73,7 @@
                 </div>
               </div>
               <div class="ps-cart__total">
-                <h3>Total Price: <span> 2599.00 $</span></h3><a class="ps-btn" href="checkout.html">Process to checkout<i class="ps-icon-next"></i></a>
+                <h3>Total Price: <span> 2599.00 $</span></h3><a class="ps-btn" href="checkout">Process to checkout<i class="ps-icon-next"></i></a>
               </div>
             </div>
           </div>

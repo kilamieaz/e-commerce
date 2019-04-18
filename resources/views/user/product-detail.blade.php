@@ -52,10 +52,10 @@
                 <div class="ps-product__block ps-product__style">
                   <h4>CHOOSE YOUR STYLE</h4>
                   <ul>
-                    <li><a href="product-detail.html"><img src="images/shoe/sidebar/1.jpg" alt=""></a></li>
-                    <li><a href="product-detail.html"><img src="images/shoe/sidebar/2.jpg" alt=""></a></li>
-                    <li><a href="product-detail.html"><img src="images/shoe/sidebar/3.jpg" alt=""></a></li>
-                    <li><a href="product-detail.html"><img src="images/shoe/sidebar/2.jpg" alt=""></a></li>
+                    <li><a href="product-detail"><img src="images/shoe/sidebar/1.jpg" alt=""></a></li>
+                    <li><a href="product-detail"><img src="images/shoe/sidebar/2.jpg" alt=""></a></li>
+                    <li><a href="product-detail"><img src="images/shoe/sidebar/3.jpg" alt=""></a></li>
+                    <li><a href="product-detail"><img src="images/shoe/sidebar/2.jpg" alt=""></a></li>
                   </ul>
                 </div>
                 <div class="ps-product__block ps-product__size">
@@ -189,7 +189,7 @@
               <div class="ps-shoes--carousel">
                 <div class="ps-shoe">
                   <div class="ps-shoe__thumbnail">
-                    <div class="ps-badge"><span>New</span></div><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="images/shoe/1.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
+                    <div class="ps-badge"><span>New</span></div><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="images/shoe/1.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail"></a>
                   </div>
                   <div class="ps-shoe__content">
                     <div class="ps-shoe__variants">
@@ -212,7 +212,7 @@
                 <div class="ps-shoe">
                   <div class="ps-shoe__thumbnail">
                     <div class="ps-badge"><span>New</span></div>
-                    <div class="ps-badge ps-badge--sale ps-badge--2nd"><span>-35%</span></div><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="images/shoe/2.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
+                    <div class="ps-badge ps-badge--sale ps-badge--2nd"><span>-35%</span></div><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="images/shoe/2.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail"></a>
                   </div>
                   <div class="ps-shoe__content">
                     <div class="ps-shoe__variants">
@@ -235,7 +235,7 @@
               <div class="ps-shoes--carousel">
                 <div class="ps-shoe">
                   <div class="ps-shoe__thumbnail">
-                    <div class="ps-badge"><span>New</span></div><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="images/shoe/3.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
+                    <div class="ps-badge"><span>New</span></div><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="images/shoe/3.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail"></a>
                   </div>
                   <div class="ps-shoe__content">
                     <div class="ps-shoe__variants">
@@ -256,7 +256,7 @@
               </div>
               <div class="ps-shoes--carousel">
                 <div class="ps-shoe">
-                  <div class="ps-shoe__thumbnail"><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="images/shoe/4.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
+                  <div class="ps-shoe__thumbnail"><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="images/shoe/4.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail"></a>
                   </div>
                   <div class="ps-shoe__content">
                     <div class="ps-shoe__variants">
@@ -278,7 +278,7 @@
               <div class="ps-shoes--carousel">
                 <div class="ps-shoe">
                   <div class="ps-shoe__thumbnail">
-                    <div class="ps-badge"><span>New</span></div><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="images/shoe/5.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
+                    <div class="ps-badge"><span>New</span></div><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="images/shoe/5.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail"></a>
                   </div>
                   <div class="ps-shoe__content">
                     <div class="ps-shoe__variants">
@@ -299,7 +299,7 @@
               </div>
               <div class="ps-shoes--carousel">
                 <div class="ps-shoe">
-                  <div class="ps-shoe__thumbnail"><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="images/shoe/6.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
+                  <div class="ps-shoe__thumbnail"><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="images/shoe/6.jpg" alt=""><a class="ps-shoe__overlay" href="product-detail"></a>
                   </div>
                   <div class="ps-shoe__content">
                     <div class="ps-shoe__variants">

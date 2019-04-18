@@ -50,7 +50,7 @@
                     <div class="ps-shoe mb-30">
                       <div class="ps-shoe__thumbnail">
                         <div class="ps-badge"><span>New</span></div>
-                        <div class="ps-badge ps-badge--sale ps-badge--2nd"><span>-35%</span></div><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="{{ asset('images/shoe/1.jpg') }}" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
+                        <div class="ps-badge ps-badge--sale ps-badge--2nd"><span>-35%</span></div><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="{{ asset('images/shoe/1.jpg') }}" alt=""><a class="ps-shoe__overlay" href="product-detail"></a>
                       </div>
                       <div class="ps-shoe__content">
                         <div class="ps-shoe__variants">
@@ -74,7 +74,7 @@
                 <div class="grid-item nike">
                   <div class="grid-item__content-wrapper">
                     <div class="ps-shoe mb-30">
-                      <div class="ps-shoe__thumbnail"><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="{{ asset('images/shoe/2.jpg') }}" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
+                      <div class="ps-shoe__thumbnail"><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="{{ asset('images/shoe/2.jpg') }}" alt=""><a class="ps-shoe__overlay" href="product-detail"></a>
                       </div>
                       <div class="ps-shoe__content">
                         <div class="ps-shoe__variants">
@@ -97,7 +97,7 @@
                 <div class="grid-item adidas">
                   <div class="grid-item__content-wrapper">
                     <div class="ps-shoe mb-30">
-                      <div class="ps-shoe__thumbnail"><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="{{ asset('images/shoe/3.jpg') }}" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
+                      <div class="ps-shoe__thumbnail"><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="{{ asset('images/shoe/3.jpg') }}" alt=""><a class="ps-shoe__overlay" href="product-detail"></a>
                       </div>
                       <div class="ps-shoe__content">
                         <div class="ps-shoe__variants">
@@ -121,7 +121,7 @@
                   <div class="grid-item__content-wrapper">
                     <div class="ps-shoe mb-30">
                       <div class="ps-shoe__thumbnail">
-                        <div class="ps-badge ps-badge--sale"><span>-35%</span></div><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="{{ asset('images/shoe/4.jpg') }}" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
+                        <div class="ps-badge ps-badge--sale"><span>-35%</span></div><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="{{ asset('images/shoe/4.jpg') }}" alt=""><a class="ps-shoe__overlay" href="product-detail"></a>
                       </div>
                       <div class="ps-shoe__content">
                         <div class="ps-shoe__variants">
@@ -145,7 +145,7 @@
                 <div class="grid-item men">
                   <div class="grid-item__content-wrapper">
                     <div class="ps-shoe mb-30">
-                      <div class="ps-shoe__thumbnail"><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="{{ asset('images/shoe/5.jpg') }}" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
+                      <div class="ps-shoe__thumbnail"><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="{{ asset('images/shoe/5.jpg') }}" alt=""><a class="ps-shoe__overlay" href="product-detail"></a>
                       </div>
                       <div class="ps-shoe__content">
                         <div class="ps-shoe__variants">
@@ -168,7 +168,7 @@
                 <div class="grid-item women">
                   <div class="grid-item__content-wrapper">
                     <div class="ps-shoe mb-30">
-                      <div class="ps-shoe__thumbnail"><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="{{ asset('images/shoe/6.jpg') }}" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
+                      <div class="ps-shoe__thumbnail"><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="{{ asset('images/shoe/6.jpg') }}" alt=""><a class="ps-shoe__overlay" href="product-detail"></a>
                       </div>
                       <div class="ps-shoe__content">
                         <div class="ps-shoe__variants">
@@ -191,7 +191,7 @@
                 <div class="grid-item kids">
                   <div class="grid-item__content-wrapper">
                     <div class="ps-shoe mb-30">
-                      <div class="ps-shoe__thumbnail"><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="{{ asset('images/shoe/7.jpg') }}" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
+                      <div class="ps-shoe__thumbnail"><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="{{ asset('images/shoe/7.jpg') }}" alt=""><a class="ps-shoe__overlay" href="product-detail"></a>
                       </div>
                       <div class="ps-shoe__content">
                         <div class="ps-shoe__variants">
@@ -214,7 +214,7 @@
                 <div class="grid-item kids">
                   <div class="grid-item__content-wrapper">
                     <div class="ps-shoe mb-30">
-                      <div class="ps-shoe__thumbnail"><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="{{ asset('images/shoe/8.jpg') }}" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
+                      <div class="ps-shoe__thumbnail"><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="{{ asset('images/shoe/8.jpg') }}" alt=""><a class="ps-shoe__overlay" href="product-detail"></a>
                       </div>
                       <div class="ps-shoe__content">
                         <div class="ps-shoe__variants">
@@ -299,7 +299,7 @@
               <div class="ps-shoes--carousel">
                 <div class="ps-shoe">
                   <div class="ps-shoe__thumbnail">
-                    <div class="ps-badge"><span>New</span></div><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="{{ asset('images/shoe/1.jpg') }}" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
+                    <div class="ps-badge"><span>New</span></div><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="{{ asset('images/shoe/1.jpg') }}" alt=""><a class="ps-shoe__overlay" href="product-detail"></a>
                   </div>
                   <div class="ps-shoe__content">
                     <div class="ps-shoe__variants">
@@ -322,7 +322,7 @@
                 <div class="ps-shoe">
                   <div class="ps-shoe__thumbnail">
                     <div class="ps-badge"><span>New</span></div>
-                    <div class="ps-badge ps-badge--sale ps-badge--2nd"><span>-35%</span></div><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="{{ asset('images/shoe/2.jpg') }}" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
+                    <div class="ps-badge ps-badge--sale ps-badge--2nd"><span>-35%</span></div><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="{{ asset('images/shoe/2.jpg') }}" alt=""><a class="ps-shoe__overlay" href="product-detail"></a>
                   </div>
                   <div class="ps-shoe__content">
                     <div class="ps-shoe__variants">
@@ -345,7 +345,7 @@
               <div class="ps-shoes--carousel">
                 <div class="ps-shoe">
                   <div class="ps-shoe__thumbnail">
-                    <div class="ps-badge"><span>New</span></div><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="{{ asset('images/shoe/3.jpg') }}" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
+                    <div class="ps-badge"><span>New</span></div><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="{{ asset('images/shoe/3.jpg') }}" alt=""><a class="ps-shoe__overlay" href="product-detail"></a>
                   </div>
                   <div class="ps-shoe__content">
                     <div class="ps-shoe__variants">
@@ -366,7 +366,7 @@
               </div>
               <div class="ps-shoes--carousel">
                 <div class="ps-shoe">
-                  <div class="ps-shoe__thumbnail"><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="{{ asset('images/shoe/4.jpg') }}" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
+                  <div class="ps-shoe__thumbnail"><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="{{ asset('images/shoe/4.jpg') }}" alt=""><a class="ps-shoe__overlay" href="product-detail"></a>
                   </div>
                   <div class="ps-shoe__content">
                     <div class="ps-shoe__variants">
@@ -388,7 +388,7 @@
               <div class="ps-shoes--carousel">
                 <div class="ps-shoe">
                   <div class="ps-shoe__thumbnail">
-                    <div class="ps-badge"><span>New</span></div><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="{{ asset('images/shoe/5.jpg') }}" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
+                    <div class="ps-badge"><span>New</span></div><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="{{ asset('images/shoe/5.jpg') }}" alt=""><a class="ps-shoe__overlay" href="product-detail"></a>
                   </div>
                   <div class="ps-shoe__content">
                     <div class="ps-shoe__variants">
@@ -409,7 +409,7 @@
               </div>
               <div class="ps-shoes--carousel">
                 <div class="ps-shoe">
-                  <div class="ps-shoe__thumbnail"><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="{{ asset('images/shoe/6.jpg') }}" alt=""><a class="ps-shoe__overlay" href="product-detail.html"></a>
+                  <div class="ps-shoe__thumbnail"><a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a><img src="{{ asset('images/shoe/6.jpg') }}" alt=""><a class="ps-shoe__overlay" href="product-detail"></a>
                   </div>
                   <div class="ps-shoe__content">
                     <div class="ps-shoe__variants">
