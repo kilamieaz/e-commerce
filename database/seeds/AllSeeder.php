@@ -56,7 +56,7 @@ class AllSeeder extends Seeder
                 'user_id' => $user->id,
             ]));
             //data category
-            factory(Category::class, 5)->create()->each(function ($category) use ($user) {
+            factory(Category::class)->create()->each(function ($category) use ($user) {
                 $product = $category->products()->save(factory(Product::class)->create([
                     'category_id' => $category->id,
                 ]));
@@ -84,5 +84,11 @@ class AllSeeder extends Seeder
                 });
             });
         });
+        // for ($i = 0; $i < 4; $i++) {
+        //     factory(Category::class)->make([
+        //         'name' => 'children ' . str_random(3),
+        //         'parent_id' => $i,
+        //     ]);
+        // }
     }
 }
