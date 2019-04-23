@@ -67,5 +67,5 @@ $(".submit").click(function(){
   }
 
   $(document).on("click", ".submit", function(e){
-    alert("Data Berhasil Di Kirim");
+    alert("Your data has been proccessed.");
 });
