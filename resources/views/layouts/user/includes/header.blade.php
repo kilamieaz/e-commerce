@@ -138,7 +138,7 @@
     function deleteDataCart(id) {
         if (confirm("Are you sure?")) {
             $.ajax({
-                url: "cart/" + id,
+                url: "user-cart/" + id,
                 type: "POST",
                 data: {
                     '_method': 'DELETE',

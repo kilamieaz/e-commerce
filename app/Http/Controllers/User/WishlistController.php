@@ -5,6 +5,7 @@ namespace App\Http\Controllers\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Wishlist;
+use Illuminate\Support\Facades\Auth;
 
 class WishlistController extends Controller
 {
@@ -15,7 +16,8 @@ class WishlistController extends Controller
      */
     public function index()
     {
-        return view('user.wishlist');
+        $wishlists = Auth::user()->wishlists;
+        return view('user.wishlist', compact('wishlists'));
     }
 
     /**
@@ -84,8 +86,8 @@ class WishlistController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Wishlist $userWishlist)
     {
-        //
+        $userWishlist->delete();
     }
 }
