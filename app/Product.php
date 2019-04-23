@@ -8,6 +8,7 @@ class Product extends Model
 {
     protected $table = 'product';
     protected $guarded = [];
+    protected $with = ['category'];
 
     public function category()
     {
@@ -47,5 +48,10 @@ class Product extends Model
     public function selectText()
     {
         return $this->name;
+    }
+
+    public function priceWithCurrency()
+    {
+        return '$ ' . $this->price;
     }
 }

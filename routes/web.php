@@ -13,10 +13,6 @@
 
 Auth::routes();
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::prefix('admin')->group(function () {
     Route::get('dashboard', function () {
         return view('admin.index');
@@ -51,20 +47,17 @@ Route::get('/signup', function () {
     return view('register.register');
 })->name('signup');
 
-Route::resource('home', 'User\HomeController');
+Route::resource('', 'User\HomeController');
+Route::resource('user-cart', 'User\CartController');
+Route::resource('user-wishlist', 'User\WishlistController');
 
 Route::get('/checkout', function () {
     return view('user.checkout');
 });
-Route::get('/cart', function () {
-    return view('user.cart');
-});
+
 Route::get('/product-detail', function () {
     return view('user.product-detail');
 });
 Route::get('/product-listing', function () {
     return view('user.product-listing');
-});
-Route::get('/wishlist', function () {
-    return view('user.wishlist');
 });
