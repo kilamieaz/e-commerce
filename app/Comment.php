@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
 
 class Comment extends Model
 {
@@ -33,5 +34,10 @@ class Comment extends Model
     public function selectText()
     {
         return $this->description;
+    }
+
+    public function getCreatedAtAttribute()
+    {
+        return Carbon::parse($this->attributes['created_at'])->diffForHumans();
     }
 }
