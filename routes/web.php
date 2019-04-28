@@ -48,8 +48,14 @@ Route::get('/signup', function () {
 })->name('signup');
 
 Route::resource('', 'User\HomeController');
-Route::resource('user-cart', 'User\CartController');
-Route::resource('user-wishlist', 'User\WishlistController');
+Route::resource('user-product', 'User\ProductController');
+Route::group(['middleware' => ['auth']], function () {
+    Route::resource('user-cart', 'User\CartController');
+    Route::resource('user-wishlist', 'User\WishlistController');
+    Route::resource('user-checkout', 'User\CheckoutController');
+    Route::resource('paypal', 'User\PaypalController');
+    Route::resource('paypal-success', 'User\PaypalSuccessController');
+});
 
 Route::get('/checkout', function () {
     return view('user.checkout');
@@ -58,6 +64,7 @@ Route::get('/checkout', function () {
 Route::get('/product-detail', function () {
     return view('user.product-detail');
 });
+
 Route::get('/product-listing', function () {
     return view('user.product-listing');
 });
