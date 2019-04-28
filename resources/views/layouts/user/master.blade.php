@@ -33,9 +33,29 @@
     <link rel="stylesheet" href="{{ asset('plugins/revolution/css/navigation.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     @stack('styles')
+    <style>
+        .preloader {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background: url('../images/preloader/preloader.gif') 50% 50% no-repeat rgb(249, 249, 249);
+            opacity: .8;
+        }
+
+    </style>
+    {{-- <script>
+        $(window).load(function () {
+            $("#preloaders").delay(3000).hide(1);
+        });
+    </script> --}}
 </head>
 
 <body>
+    <!-- preloader -->
+    {{-- <div id="preloaders" class="preloader"></div> --}}
     <!-- Header -->
     @include('layouts.user.includes.header')
     <!-- End of Header-->
