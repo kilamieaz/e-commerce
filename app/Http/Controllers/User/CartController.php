@@ -5,6 +5,8 @@ namespace App\Http\Controllers\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Cart;
+use App\User;
+use Auth;
 
 class CartController extends Controller
 {
@@ -15,7 +17,9 @@ class CartController extends Controller
      */
     public function index()
     {
-        //
+        $user = User::with('carts', 'wishlists')->find(Auth()->user()->id);
+        $carts = Cart::where('user_id', Auth()->user()->id)->get();
+        return view('user.cart', compact('carts', 'user'));
     }
 
     /**
@@ -36,7 +40,12 @@ class CartController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $cart = Cart::firstOrCreate([
+            'user_id' => \Auth::user()->id,
+            'product_id' => $request->product_id,
+            'quantity' => 1,
+            'total' => $request->price,
+        ]);
     }
 
     /**
@@ -70,7 +79,25 @@ class CartController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        if ($request->ajax()) {
+            $cart = Cart::find($id);
+
+            if ($request->increase) {
+                $cart->increment('quantity');
+            } else {
+                $cart->decrement('quantity');
+            }
+            $cart->update([
+                'total' => $cart->quantity * $request->price,
+            ]);
+            $quantity = $cart->quantity;
+            $total = $cart->total;
+            $cart_total = Auth::user()->carts()->sum('total');
+            $sum = Auth::user()->carts()->sum('quantity');
+
+            return response()->json(compact('quantity', 'total', 'cart_total', 'sum'));
+            // return response()->json(['quantity' => $quantity]);
+        }
     }
 
     /**
