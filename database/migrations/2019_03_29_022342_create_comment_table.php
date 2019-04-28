@@ -17,7 +17,7 @@ class CreateCommentTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id')->index();
             $table->unsignedBigInteger('product_id')->index();
-            $table->string('description');
+            $table->text('description');
             $table->integer('value');
             $table->timestamps();
         });

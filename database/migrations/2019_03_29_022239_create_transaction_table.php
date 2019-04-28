@@ -18,6 +18,7 @@ class CreateTransactionTable extends Migration
             $table->unsignedBigInteger('user_id')->index();
             $table->unsignedBigInteger('product_id')->index();
             $table->integer('total');
+            $table->text('information')->nullable();
             $table->integer('status');
             $table->integer('quantity');
             $table->timestamps();
