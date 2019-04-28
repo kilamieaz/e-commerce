@@ -4,9 +4,9 @@ namespace App\Http\Controllers\User;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Category;
 use App\Product;
-use Auth;
+use Illuminate\Support\Facades\Auth;
+use App\User;
 
 class HomeController extends Controller
 {
@@ -17,9 +17,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $categories = Category::with('children')->get();
         $products = Product::all();
-        return view('user.home', compact('categories', 'products'));
+        if (Auth()->user()) {
+            $user = User::with('wishlists')->find(Auth()->user()->id);
+            return view('user.home', compact('products', 'user'));
+        }
+        return view('user.home', compact('products'));
     }
 
     /**
