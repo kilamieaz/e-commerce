@@ -10,7 +10,13 @@ html {
 
 	/*background = gradient + image pattern combo*/
 	background:
-		linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));
+        linear-gradient(rgba(0, 196, 183, 0.6), rgba(101, 182, 89, 0.6));
+    background-repeat: no-repeat;
+    background-size: 1000%;
+    /* padding-bottom: 200%; */
+    overflow: hidden;
+
+
 }
 
 body {
@@ -20,7 +26,7 @@ body {
 #msform {
 	width: 400px;
 	margin: 50px auto;
-	text-align: center;
+    text-align: center;
 	position: relative;
 }
 #msform fieldset {
@@ -129,6 +135,39 @@ body {
 	background: #27AE60;
 	color: white;
 }
+.invalid-feedback {
+    /* font-family: 'Calibri'; */
+    /* font-size: 1ew; */
+    color: salmon;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    /* text-shadow: 1px 1px lightseagreen; */
+}
+
+.zoom {
+    zoom: 100%;
+  }
 
 
+.checkbox {
+display: inline-block;
+left: 0;
+margin-left: -120px;
+position: absolute;
+margin-top: 1px;
+
+}
+
+label {
+    display: inline-block;
+    box-sizing: border-box;
+    margin-left: -125px;
+    font-size: 0.8em;
+    color: #2C3E50;
+    font-weight: normal;
+  }
+  span {
+      display: block;
+  }
 
