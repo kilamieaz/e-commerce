@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use App\Category;
+use App\Cart;
+use Illuminate\Support\Facades\Auth;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -26,9 +28,15 @@ class AppServiceProvider extends ServiceProvider
     {
         View()->composer('*', function ($view) {
             $categories = \Cache::rememberForever('categories', function () {
-                return Category::all();
+                return Category::withCount('products', 'parent', 'children')->get();
             });
-            $view->with('categories', $categories);
+            if (Auth::user()) {
+                $carts = Cart::where('user_id', Auth::user()->id)->get();
+                // $carts = \Cache::rememberForever('carts', function () {
+                //     return Cart::where('user_id', Auth::user()->id)->get();
+                // });
+            }
+            $view->with(compact('categories', 'carts'));
         });
     }
 }

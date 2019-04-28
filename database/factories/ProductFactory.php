@@ -7,6 +7,7 @@ $factory->define(Product::class, function (Faker $faker) {
     return [
         'name' => $faker->lexify('Product ???'),
         'description' => $faker->lexify('Description Product ???'),
+        'overview' => $faker->realText(600),
         'image' => $faker->image('public/storage/files', 800, 800, 'cats', false),
         'price' => $faker->randomNumber(3),
         'stock' => $faker->numberBetween(10, 20),

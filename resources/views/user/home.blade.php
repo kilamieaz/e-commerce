@@ -1,4 +1,5 @@
 @extends('layouts.user.master')
+
 @section('content')
 <div class="ps-banner">
     <div class="rev_slider fullscreenbanner" id="home-banner">
@@ -82,7 +83,8 @@
                 <li><a href="#" data-filter=".women">Women <sup>1</sup></a></li>
                 <li><a href="#" data-filter=".kids">Kids <sup>4</sup></a></li> --}}
                 @foreach ($categories as $item)
-                <li><a href="#" data-filter=".{{ $item->name }}">{{ $item->name }} <sup>8</sup></a></li>
+                <li><a href="#" data-filter=".{{ $item->name }}">{{ $item->name }}
+                        <sup>{{ $item->products_count }}</sup></a></li>
                 @endforeach
             </ul>
         </div>
@@ -98,14 +100,17 @@
                                 <div class="ps-shoe__thumbnail">
                                     {{-- <div class="ps-badge"><span>New</span></div> --}}
                                     {{-- <div class="ps-badge ps-badge--sale ps-badge--2nd"><span>-35%</span></div> --}}
+                                    {{-- @auth
+                                    --}}
+
                                     @auth
-                                    @if (!Auth::user()->isWishlist($item->id))
+                                    @if (!$user->wishlists->contains('product_id', $item->id))
                                     <a class="ps-shoe__favorite" onclick="wishlist({{$item->id}}, {{$item->price}} )"><i
                                             class="ps-icon-heart"></i></a>
                                     @endif
                                     @endauth
                                     <img src="{{ asset('storage/files/'.$item->image) }}" alt=""><a
-                                        class="ps-shoe__overlay" href="product-detail.html"></a>
+                                        class="ps-shoe__overlay" href="{{route('user-product.show', $item->id)}}"></a>
                                 </div>
                                 <div class="ps-shoe__content">
                                     <div class="ps-shoe__variants">
@@ -119,7 +124,7 @@
                                                 @endfor
                                         </select>
                                     </div>
-                                    <div class="ps-shoe__detail"><a class="ps-shoe__name" href="#">{{ $item->name }}</a>
+                                    <div class="ps-shoe__detail"><a class="ps-shoe__name" href="{{route('user-product.show', $item->id)}}">{{ $item->name }}</a>
                                         <p class="ps-shoe__categories"><a href="#">{{ $item->category->name }}</a></p>
                                         <span class="ps-shoe__price">{{ $item->priceWithCurrency() }}</span>
                                     </div>
@@ -219,7 +224,7 @@
                             <a class="ps-shoe__favorite" href="#"><i class="ps-icon-heart"></i></a>
                             @endauth
                             <img src="{{ asset('storage/files/'.$item->image) }}" alt=""><a class="ps-shoe__overlay"
-                                href="product-detail.html"></a>
+                                href="{{route('user-product.show', $item->id)}}.html"></a>
                         </div>
                         <div class="ps-shoe__content">
                             <div class="ps-shoe__variants">
@@ -234,7 +239,7 @@
                                 </select>
                             </div>
                             <div class="ps-shoe__detail"><a class="ps-shoe__name"
-                                    href="product-detai.html">{{ $item->name }}</a>
+                                    href="{{route('user-product.show', $item->id)}}">{{ $item->name }}</a>
                                 <p class="ps-shoe__categories"><a href="#">{{ $item->category->name }}</a></p>
                                 <span class="ps-shoe__price">{{ $item->priceWithCurrency() }}</span>
                                 {{-- <span class="ps-shoe__price"><del>£220</del>{{ $item->price }}</span> --}}
