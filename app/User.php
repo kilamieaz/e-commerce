@@ -83,15 +83,4 @@ class User extends Authenticatable
     {
         return $this->email;
     }
-
-    public function isWishlist($product_id)
-    {
-        $userWishlist = $this->wishlists;
-        foreach ($userWishlist as $item) {
-            if ($item->product_id == $product_id) {
-                return true;
-            }
-        }
-        return false;
-    }
 }

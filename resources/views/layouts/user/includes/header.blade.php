@@ -40,7 +40,7 @@
     <nav class="navigation">
         <div class="container-fluid">
             <div class="navigation__column left">
-                <div class="header__logo"><a class="ps-logo" href="/user"><img src="{{ asset('images/logo.png') }}"
+                <div class="header__logo"><a class="ps-logo" href="/"><img src="{{ asset('images/logo.png') }}"
                             alt=""></a></div>
             </div>
             <div class="navigation__column center">
@@ -87,30 +87,30 @@
                     <button><i class="ps-icon-search"></i></button>
                 </form>
                 <div class="ps-cart"><a class="ps-cart__toggle"
-                        href="#"><span><i>{{Auth::user()->carts()->count()}}</i></span><i
+                        href="{{route('user-cart.index')}}"><span><i id="qtySpan">{{Auth::user()->carts()->sum('quantity')}}</i></span><i
                             class="ps-icon-shopping-cart"></i></a>
                     @if (Auth::user()->carts()->count())
 
                     <div class="ps-cart__listing">
                         <div class="ps-cart__content">
-                            @foreach (Auth::user()->carts()->get() as $item)
+                            @foreach ($carts as $item)
                             <div class="ps-cart-item"><a class="ps-cart-item__close"
                                     onclick="deleteDataCart({{$item->id}})"></a>
-                                <div class="ps-cart-item__thumbnail"><a href="product-detail"></a><img
+                                <div class="ps-cart-item__thumbnail"><a href="{{ route('user-product.show', $item->product->id) }}"></a><img
                                         src="{{ asset('images/cart-preview/1.jpg') }}" alt=""></div>
                                 <div class="ps-cart-item__content"><a class="ps-cart-item__title"
-                                        href="product-detail">{{ $item->product->name }}</a>
-                                    <p><span>Quantity:<i>{{ $item->quantity }}</i></span><span>Total:<i>{{ $item->total }}</i></span>
+                                        href="{{ route('user-product.show', $item->product->id) }}">{{ $item->product->name }}</a>
+                                    <p><span>Quantity:<i id="qty_p_{{$item->id}}">{{ $item->quantity }}</i></span><span>Total:<i class="total_{{$item->id}}">{{ $item->total }}</i></span>
                                     </p>
                                 </div>
                             </div>
                             @endforeach
                         </div>
                         <div class="ps-cart__total">
-                            <p>Number of items:<span>{{ Auth::user()->carts->count() }}</span></p>
-                            <p>Item Total:<span>{{ Auth::user()->carts->sum('total') }}</span></p>
+                            <p>Number of items:<span id="qtyNumberOfItems">{{ Auth::user()->carts->sum('quantity') }}</span></p>
+                            <p>Item Total:<span class="cart_total">{{ Auth::user()->carts->sum('total') }}</span></p>
                         </div>
-                        <div class="ps-cart__footer"><a class="ps-btn" href="cart">Check out<i
+                        <div class="ps-cart__footer"><a class="ps-btn" href="{{route('user-checkout.index')}}">Check out<i
                                     class="ps-icon-arrow-left"></i></a></div>
                     </div>
                     @else
@@ -118,7 +118,7 @@
                         <div class="ps-cart__content">
                             <div class="ps-cart-item">
                                 <div class="ps-cart-item__content">
-                                    <p class="ps-cart-item__title" href="product-detail">No Cart</p>
+                                    <p class="ps-cart-item__title">No Cart</p>
                                 </div>
                             </div>
                         </div>
