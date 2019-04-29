@@ -55,6 +55,14 @@ $(".next").click(function(){
 
   disableField();
 
+  var bt = document.getElementById('submit');
+var field = document.getElementsByClassName("textInput").value;
+if (field == ""){
+bt.disabled = true;
+}else {
+    bt.disabled = false;
+}
+
 
 $(".submit").click(function(){
 	return true;
@@ -66,6 +74,4 @@ $(".submit").click(function(){
     input.addEventListener('change', disableField);
   }
 
-  $(document).on("click", ".submit", function(e){
-    alert("Your data has been proccessed.");
-});
+

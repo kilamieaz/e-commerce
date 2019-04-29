@@ -16,7 +16,6 @@
   <!-- progressbar -->
   <ul id="progressbar">
     <li class="active">Account Setup</li>
-    <li>Social Profiles</li>
     <li>Personal Details</li>
   </ul>
   <!-- fieldsets -->
@@ -35,22 +34,13 @@
 
     </script>
   </fieldset>
-  <fieldset class="fieldset2">
-    <h2 class="fs-title">Social Profiles</h2>
-    <h3 class="fs-subtitle">Your presence on the social network</h3>
-    <input type="text" name="twitter" placeholder="Twitter" required/>
-    <input type="text" name="facebook" placeholder="Facebook" required/>
-    <input type="text" name="gplus" placeholder="Google Plus"required />
-    <input type="button" name="previous" class="previous action-button" value="Previous" />
-    <input type="submit" id="submitBtn2" name="next" class="next2 action-button" value="Next" />
-  </fieldset>
   <fieldset class="fieldset3">
     <h2 class="fs-title">Personal Details</h2>
     <h3 class="fs-subtitle">We will never sell it</h3>
-    <input type="text" name="fname" placeholder="First Name" required/>
-    <input type="text" name="lname" placeholder="Last Name" required/>
-    <input type="text" name="phone" placeholder="Phone" required/>
-    <textarea name="address" placeholder="Address"></textarea>
+    <input class="textInput" type="text" name="fname" placeholder="First Name" required/>
+    <input class="textInput" type="text" name="lname" placeholder="Last Name" required/>
+    <input class="textInput" type="text" name="phone" placeholder="Phone" required/>
+    <textarea class="textInput" name="address" placeholder="Address"></textarea>
     <input type="submit"  name="previous" class="previous action-button" value="Previous" />
     <input type="submit" id="submit" name="submit" class="submit action-button" value="Submit" />
   </fieldset>
