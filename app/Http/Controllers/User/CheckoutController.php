@@ -15,8 +15,24 @@ class CheckoutController extends Controller
      */
     public function index()
     {
+        $client = new \GuzzleHttp\Client();
+        $province = $client->request('GET', 'https://api.rajaongkir.com/starter/province', [
+            'headers' => [
+                'key' => env('RAJA_ONGKIR_API'),
+            ]
+        ]);
+        $city = $client->request('GET', 'https://api.rajaongkir.com/starter/city', [
+            'headers' => [
+                'key' => env('RAJA_ONGKIR_API'),
+            ]
+        ]);
+
+        $dataProvince = \GuzzleHttp\json_decode($province->getBody());
+        $dataCity = \GuzzleHttp\json_decode($city->getBody());
+        $province = collect($dataProvince->rajaongkir->results);
+        $city = collect($dataCity->rajaongkir->results);
         $user = Auth::user();
-        return view('user.checkout', compact('user'));
+        return view('user.checkout', compact('user', 'province', 'city'));
     }
 
     /**

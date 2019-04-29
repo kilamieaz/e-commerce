@@ -47,13 +47,31 @@ class AllSeeder extends Seeder
         $user_profile->phone_number = '0820123';
         $user_profile->save();
 
+        $client = new \GuzzleHttp\Client();
+        $province = $client->request('GET', 'https://api.rajaongkir.com/starter/province', [
+            'headers' => [
+                'key' => env('RAJA_ONGKIR_API'),
+            ]
+        ]);
+        $city = $client->request('GET', 'https://api.rajaongkir.com/starter/city', [
+            'headers' => [
+                'key' => env('RAJA_ONGKIR_API'),
+            ]
+        ]);
+        $dataProvince = \GuzzleHttp\json_decode($province->getBody());
+        $dataCity = \GuzzleHttp\json_decode($city->getBody());
+        $province = collect($dataProvince->rajaongkir->results);
+        $city = collect($dataCity->rajaongkir->results);
+
         //data user
         factory(User::class, 5)->create([
             'role_id' => $roleUser->id
-        ])->each(function ($user) {
+        ])->each(function ($user) use ($province, $city) {
             //data user profile
             $user->userProfile()->save(factory(UserProfile::class)->make([
                 'user_id' => $user->id,
+                'province_id' => $province->random()->province_id,
+                'city_id' => $city->random()->city_id,
             ]));
             //data category
             factory(Category::class)->create()->each(function ($category) use ($user) {
