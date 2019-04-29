@@ -103,7 +103,7 @@
                         @guest
                         <a class="ps-btn mb-10" disabled>Add to cart<i class="ps-icon-next"></i></a>
                         <div class="ps-product__actions">
-                            <a class="mr-10" href="{{route('signin')}}"><i class="ps-icon-heart"></i></a>
+                            <a class="mr-10" href="{{route('signIn')}}"><i class="ps-icon-heart"></i></a>
                         </div>
                         @endguest
 

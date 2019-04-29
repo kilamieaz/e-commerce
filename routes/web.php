@@ -40,9 +40,9 @@ Route::prefix('datatable')->group(function () {
     Route::get('transaction-datatable', 'Datatable\TransactionDataTableController@index')->name('datatable.transaction');
 });
 
-Route::get('/signin', function () {
+Route::get('/signIn', function () {
     return view('login.login');
-})->name('signin');
+})->name('signIn');
 Route::get('/signup', function () {
     return view('register.register');
 })->name('signup');
@@ -53,6 +53,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('user-cart', 'User\CartController');
     Route::resource('user-wishlist', 'User\WishlistController');
     Route::resource('user-checkout', 'User\CheckoutController');
+    Route::get('user-get-city', 'User\GetCityController@index');
     Route::resource('paypal', 'User\PaypalController');
     Route::resource('paypal-success', 'User\PaypalSuccessController');
 });

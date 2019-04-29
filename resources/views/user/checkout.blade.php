@@ -33,11 +33,31 @@
                             </label>
                             <input class="form-control" type="text" value="{{$user->userProfile->address}}" disabled>
                         </div>
+                        <div class="form-group form-group--inline">
+                            <label>Province<span>*</span>
+                            </label>
+                            <select name="province_id" id="province_id" class="form-control">
+                                @foreach ($province as $item)
+                                <option value="{{$item->province_id}}" {{ ($item->province_id == $user->userProfile->province_id) ? 'selected' : '' }}>{{ $item->province }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+
+                        <div class="form-group form-group--inline">
+                            <label>City<span>*</span>
+                            </label>
+                            <select name="city_id" id="city_id" class="form-control">
+                                @foreach ($city as $item)
+                                <option value="{{$item->city_id}}" {{ ($item->city_id == $user->userProfile->city_id) ? 'selected' : '' }}>{{ $item->city_name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
                         <h3 class="mt-40"> Addition information</h3>
                         <div class="form-group form-group--inline textarea">
                             <label>Order Notes</label>
                             <textarea name="information" class="form-control" rows="5"
-                                placeholder="Notes about your order, e.g. special notes for delivery." required></textarea>
+                                placeholder="Notes about your order, e.g. special notes for delivery."
+                                required></textarea>
                         </div>
                     </div>
                 </div>
@@ -84,8 +104,8 @@
                                     <li><a href="#"><img src="images/payment/2.png" alt=""></a></li>
                                     <li><a href="#"><img src="images/payment/3.png" alt=""></a></li>
                                 </ul> --}}
-                                <a href="{{ route('paypal.index') }}" type="button" class="ps-btn ps-btn--fullwidth">Place Order<i
-                                        class="ps-icon-next"></i></a>
+                                <a href="{{ route('paypal.index') }}" type="button"
+                                    class="ps-btn ps-btn--fullwidth">Place Order<i class="ps-icon-next"></i></a>
                             </div>
                         </footer>
                     </div>
@@ -100,3 +120,32 @@
     </div>
 </div>
 @endsection
+
+@push('scripts')
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#province_id').change(function () {
+            var provinceID = $(this).val();
+            if (provinceID) {
+                $.ajax({
+                    type: "GET",
+                    url: "{{url('user-get-city')}}?province_id=" + provinceID,
+                    success: function (res) {
+                        if (res) {
+                            $("#city_id").find('option').remove();
+                            $.each(res, function (key, value) {
+                                $('#city_id').append("<option value='"+value.city_id+"'>"+value.city_name+"</option>");
+                            });
+                        } else {
+                            $(".city_id").empty();
+                        }
+                    }
+                });
+            } else {
+                $("#city").empty();
+            }
+        });
+    });
+
+</script>
+@endpush

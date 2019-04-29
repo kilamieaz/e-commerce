@@ -27,7 +27,7 @@
     <input id="password" name="password" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 6 characters' : ''); if(this.checkValidity()) form.password_two.pattern = this.value;" placeholder="Password" required>
     <input id="password_two" name="password_two" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Please enter the same Password as above' : '');" placeholder="Verify Password" required>
     <input type="submit" id="submitBtn" name="next" class="next action-button" value="Next" />
-    <a id="forgot" href="signin" style="text-decoration:none;">
+    <a id="forgot" href="{{route('signIn')}}" style="text-decoration:none;">
                 <h3 class="fs-subtitle">Already Have an Account?</h3>
             </a>
     <script>

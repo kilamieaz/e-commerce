@@ -27,7 +27,7 @@
                                 aria-haspopup="true" aria-expanded="false">Login / Register<i
                                     class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="{{ route('signin') }}">Login</a></li>
+                                <li><a href="{{ route('signIn') }}">Login</a></li>
                                 <li><a href="{{ route('signup') }}">Register</a></li>
                             </ul>
                         </div>

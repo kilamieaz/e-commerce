@@ -21,7 +21,8 @@
             </p>
             @endif</h3>
             <input pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" type="text" name="email" required placeholder="Email" />
-            <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" type="password" name="password" required placeholder="Password" />
+            {{-- <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" type="password" name="password" required placeholder="Password" /> --}}
+            <input type="password" name="password" required placeholder="Password" />
             @if ($errors->has('password'))
             {{-- <span class="invalid-feedback" role="alert">
                 <strong>{{ $errors->first('password') }}</strong>
