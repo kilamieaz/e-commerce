@@ -18,12 +18,12 @@ class CreateProductTable extends Migration
             $table->unsignedBigInteger('category_id')->index();
             $table->string('name');
             $table->string('description');
-            $table->text('overview');
+            $table->text('overview')->nullable();
             $table->string('image');
             $table->integer('price');
             $table->integer('stock');
-            $table->integer('rating');
-            $table->integer('sold');
+            $table->integer('rating')->nullable();
+            $table->integer('sold')->nullable();
             $table->integer('status');
             $table->timestamps();
         });

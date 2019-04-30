@@ -16,7 +16,7 @@
                 <tbody>
                     @foreach ($carts as $item)
                     <tr>
-                        <td><a class="ps-product__preview" href="product-detail.html"><img class="mr-15"
+                        <td><a class="ps-product__preview" href="{{ route('user-product.show', $item->product->id) }}"><img class="mr-15"
                                     src="images/product/cart-preview/1.jpg" alt=""> {{$item->product->name}}</a></td>
                         <td id="price">{{$item->product->price}}</td>
                         <td>

@@ -18,7 +18,7 @@
                         <td><a class="ps-product__preview" href="product-detail.html"><img class="mr-15"
                                     src="images/product/cart-preview/1.jpg" alt=""> {{ $item->product->name }}</a></td>
                         <td>{{ $item->product->priceWithCurrency() }}</td>
-                        <td><a class="ps-product-link" href="product-detail.html">View Product</a></td>
+                        <td><a class="ps-product-link" href="{{ route('user-product.show', $item->product->id) }}">View Product</a></td>
                         <td>
                             <div class="ps-remove" onclick="deleteDataWishlist({{ $item->id }})"></div>
                         </td>
@@ -52,6 +52,5 @@
             });
         }
     }
-
 </script>
 @endpush

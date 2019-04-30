@@ -17,8 +17,8 @@
                         <img src="https://img.icons8.com/cotton/64/000000/checkmark.png">
 
 
-                        <h3 class="fs-subtitle">ID Transaction: TRXxxxxx00ID was Payed </h3>
-                        <button class="ps-btn ps-btn--gray" style="margin-top: 20px;">View Receipt</button>
+                        <h3 class="fs-subtitle">ID Transaction: {{$PayerID}} was Payed </h3>
+                        <a type="button" class="ps-btn ps-btn--gray" style="margin-top: 20px;" href="{{route('user-transaction.index')}}">View Receipt</a>
                       </fieldset>
             </div>
           </div>

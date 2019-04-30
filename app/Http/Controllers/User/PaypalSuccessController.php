@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Srmklive\PayPal\Services\ExpressCheckout;
 use App\Cart;
 use App\Transaction;
+use DB;
 
 class PaypalSuccessController extends Controller
 {
@@ -21,18 +22,20 @@ class PaypalSuccessController extends Controller
         $data = Cart::cartData($invoiceId, $carts);
         $response = $provider->doExpressCheckoutPayment($data, $token, $PayerID);
 
-        foreach ($carts as $item) {
-            $transaction = Transaction::create([
-                'user_id' => Auth()->user()->id,
-                'product_id' => $item->product_id,
-                'total' => $item->total,
-                'status' => 0,
-                'quantity' => $item->quantity,
-            ]);
-            //delete cart
-            $item->delete();
-        }
-        // dd($response);
-        return 'Order completed';
+        DB::transaction(function () use ($carts) {
+            foreach ($carts as $item) {
+                $transaction = Transaction::create([
+                    'user_id' => Auth()->user()->id,
+                    'product_id' => $item->product_id,
+                    'total' => $item->total,
+                    'status' => 0,
+                    'quantity' => $item->quantity,
+                ]);
+                //delete cart
+                $item->delete();
+            }
+        });
+
+        return view('user.payment', compact('transaction', 'PayerID'));
     }
 }

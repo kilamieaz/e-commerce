@@ -11,7 +11,7 @@ class SubCategoryDataTableController extends Controller
     public function index()
     {
         // $categories = Category::with('parent')->where('parent_id', '!=', null)->get();
-        $categories = Category::with('parent')->whereNotNull('parent_id')->get();
+        $categories = Category::with('parent')->categoryChildren();
         // $categories = Category::where('parent_id', '!=', null)->with('parent');
 
         $data = [];
@@ -21,7 +21,7 @@ class SubCategoryDataTableController extends Controller
             $row[] = $list->name;
             $row[] = $list->parent->name;
             $row[] = $list->description;
-            $row[] = '<div class="text-center"><img style="height:50px; width:50px" src="' . Storage::url($list->image) . '"></div>';
+            $row[] = '<div class="text-center"><img style="height:50px; width:50px" src="' . Storage::url('files/' . $list->image) . '"></div>';
             $row[] = '<div class="text-center"><div class="btn-group">
                <button type="button" onclick="editForm(' . $list->id . ')" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></button>
                <button type="button" onclick="deleteData(' . $list->id . ')" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button></div></div>';

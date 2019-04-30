@@ -103,7 +103,7 @@ class AllSeeder extends Seeder
             });
         });
 
-        factory(Category::class, 10)->create([
+        factory(Category::class, 5)->create([
             'name' => 'children' . str_random(3),
             'parent_id' => rand(1, 4),
         ]);

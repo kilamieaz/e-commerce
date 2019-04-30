@@ -4,10 +4,9 @@ namespace App\Http\Controllers\User;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Product;
 use App\User;
 
-class ProductController extends Controller
+class TransactionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +15,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        $user = User::with('transactions')->find(Auth()->user()->id);
+        return view('user.transaction', compact('user'));
     }
 
     /**
@@ -46,16 +46,9 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Product $userProduct)
+    public function show($id)
     {
-        $collection = Product::withCount('replies')->where('category_id', $userProduct->category->id)->get();
-        $products = $collection->count() >= 5 ? $collection->random(5) : $collection->random($collection->count());
-        $userProduct->withCount('replies', 'carts', 'comments');
-        if (Auth()->user()) {
-            $user = User::with('carts', 'wishlists')->find(Auth()->user()->id);
-            return view('user.product-detail', compact('user', 'userProduct', 'products'));
-        }
-        return view('user.product-detail', compact('userProduct', 'products'));
+        //
     }
 
     /**

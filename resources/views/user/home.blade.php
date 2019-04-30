@@ -6,14 +6,14 @@
         <ul>
             <li class="ps-banner" data-index="rs-2972" data-transition="random" data-slotamount="default"
                 data-hideafterloop="0" data-hideslideonmobile="off" data-rotate="0"><img class="rev-slidebg"
-                    src="{{ asset('images/slider/3.jpg') }}" alt="" data-bgposition="center center" data-bgfit="cover"
+                    src="{{ asset('images2/slider/3.jpg') }}" alt="" data-bgposition="center center" data-bgfit="cover"
                     data-bgrepeat="no-repeat" data-bgparallax="5" data-no-retina>
                 <div class="tp-caption ps-banner__header" id="layer-1" data-x="left"
                     data-hoffset="['-60','15','15','15']" data-y="['middle','middle','middle','middle']"
                     data-voffset="['-150','-120','-150','-170']" data-width="['none','none','none','400']"
                     data-type="text" data-responsive_offset="on"
                     data-frames="[{&quot;delay&quot;:1000,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;x:50px;opacity:0;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:300,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;x:50px;opacity:0;&quot;,&quot;ease&quot;:&quot;Power3.easeInOut&quot;}]">
-                    <p>March 2002 <br> Nike SB Dunk Low Pro</p>
+                    <p>March 2019 <br> TheCloth SB Dunk Low Pro</p>
                 </div>
                 <div class="tp-caption ps-banner__title" id="layer21" data-x="['left','left','left','left']"
                     data-hoffset="['-60','15','15','15']" data-y="['middle','middle','middle','middle']"
@@ -38,7 +38,7 @@
             </li>
             <li class="ps-banner ps-banner--white" data-index="rs-100" data-transition="random"
                 data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-rotate="0"><img
-                    class="rev-slidebg" src="{{ asset('images/slider/2.jpg') }}" alt="" data-bgposition="center center"
+                    class="rev-slidebg" src="{{ asset('images2/slider/2.jpg') }}" alt="" data-bgposition="center center"
                     data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="5" data-no-retina>
                 <div class="tp-caption ps-banner__header" id="layer20" data-x="left"
                     data-hoffset="['-60','15','15','15']" data-y="['middle','middle','middle','middle']"
@@ -82,7 +82,7 @@
                 <li><a href="#" data-filter=".men">Men <sup>1</sup></a></li>
                 <li><a href="#" data-filter=".women">Women <sup>1</sup></a></li>
                 <li><a href="#" data-filter=".kids">Kids <sup>4</sup></a></li> --}}
-                @foreach ($categories as $item)
+                @foreach ($categoriesParent as $item)
                 <li><a href="#" data-filter=".{{ $item->name }}">{{ $item->name }}
                         <sup>{{ $item->products_count }}</sup></a></li>
                 @endforeach
@@ -125,7 +125,7 @@
                                         </select>
                                     </div>
                                     <div class="ps-shoe__detail"><a class="ps-shoe__name" href="{{route('user-product.show', $item->id)}}">{{ $item->name }}</a>
-                                        <p class="ps-shoe__categories"><a href="#">{{ $item->category->name }}</a></p>
+                                        <p class="ps-shoe__categories"><a href="{{url("user-product-listing?category_id=$item->category_id")}}">{{ $item->category->name }}</a></p>
                                         <span class="ps-shoe__price">{{ $item->priceWithCurrency() }}</span>
                                     </div>
                                 </div>
@@ -140,9 +140,9 @@
 </div>
 <div class="ps-section--offer">
     <div class="ps-column"><a class="ps-offer" href="product-listing.html"><img
-                src="{{ asset('images/banner/home-banner-1.png') }}" alt=""></a></div>
+                src="{{ asset('images2/banner/home-banner-1.png') }}" alt=""></a></div>
     <div class="ps-column"><a class="ps-offer" href="product-listing.html"><img
-                src="{{ asset('images/banner/home-banner-2.png') }}" alt=""></a></div>
+                src="{{ asset('images2/banner/home-banner-2.png') }}" alt=""></a></div>
 </div>
 <div class="ps-section--sale-off ps-section pt-80 pb-40">
     <div class="ps-container">
@@ -240,7 +240,7 @@
                             </div>
                             <div class="ps-shoe__detail"><a class="ps-shoe__name"
                                     href="{{route('user-product.show', $item->id)}}">{{ $item->name }}</a>
-                                <p class="ps-shoe__categories"><a href="#">{{ $item->category->name }}</a></p>
+                                <p class="ps-shoe__categories"><a href="{{url("user-product-listing?category_id=$item->category_id")}}">{{ $item->category->name }}</a></p>
                                 <span class="ps-shoe__price">{{ $item->priceWithCurrency() }}</span>
                                 {{-- <span class="ps-shoe__price"><del>£220</del>{{ $item->price }}</span> --}}
                             </div>
@@ -252,7 +252,7 @@
         </div>
     </div>
 </div>
-<div class="ps-home-testimonial bg--parallax pb-80" data-background="{{ asset('images/background/parallax.jpg') }}">
+<div class="ps-home-testimonial bg--parallax pb-80" data-background="{{ asset('images2/background/parallax.jpg') }}">
     <div class="container">
         <div class="owl-slider" data-owl-auto="true" data-owl-loop="true" data-owl-speed="5000" data-owl-gap="0"
             data-owl-nav="false" data-owl-dots="true" data-owl-item="1" data-owl-item-xs="1" data-owl-item-sm="1"

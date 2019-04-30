@@ -33,4 +33,14 @@ class Category extends Model
     {
         return $this->hasMany(Category::class, 'parent_id', 'id');
     }
+
+    public function scopeCategoryChildren($query)
+    {
+        return $query->whereNotNull('parent_id')->get();
+    }
+
+    public function scopeCategoryParent($query)
+    {
+        return $query->whereNull('parent_id')->get();
+    }
 }

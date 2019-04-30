@@ -1,4 +1,4 @@
-@extends('layouts.user.master')
+{{-- @extends('layouts.user.master')
 @section('content')
 <div class="ps-content pt-80 pb-80">
         <div class="ps-container">
@@ -56,3 +56,47 @@
         </div>
       </div>
 @endsection
+
+
+
+@extends('layouts.user.master')
+@section('content')
+<div class="ps-content pt-80 pb-80">
+        <div class="ps-container">
+          <div class="ps-cart-listing">
+            <table class="table ps-cart__table">
+              <thead>
+                <tr>
+                  <th>All Products</th>
+                  <th>Price</th>
+                  <th>Quantity</th>
+                  <th>Total</th>
+                  <th>Status</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                @foreach ($user as $item)
+                <tr>
+                  <td><a class="ps-product__preview" href="{{ route('user-product.show', $item->product->id) }}"><img class="mr-15" src="images/product/cart-preview/1.jpg" alt=""> air jordan One mid</a></td>
+                  <td>{{ $item->product->priceWithCurrency() }}</td>
+                  <td>{{ $item->transactions->quantity}}</td>
+                  <td>{{ $item->transactions->total}}</td>
+                  <td>
+                    <div class="">Verifed</div>
+                  </td>
+                </tr>
+                @endforeach
+              </tbody>
+            </table>
+            <div class="ps-cart__actions">
+              <div class="ps-cart__promotion">
+                <div class="form-group">
+                  <button class="ps-btn ps-btn--gray">Continue Shopping</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+@endsection --}}

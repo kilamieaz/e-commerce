@@ -45,23 +45,23 @@
             </div>
             <div class="navigation__column center">
                 <ul class="main-menu menu">
-                    <li class="menu-item menu-item-has-children has-mega-menu"><a href="#">Categories</a>
+                    <li class="menu-item menu-item-has-children has-mega-menu"><a href="{{route('user-product-listing.index')}}">Categories</a>
                         <div class="mega-menu">
                             <div class="mega-wrap">
                                 <div class="mega-column">
                                     <ul class="mega-item mega-features">
-                                        @foreach ($categories as $item)
-                                        <li><a href="#">{{ $item->name }}</a>
+                                        @foreach ($categoriesParent as $item)
+                                        <li><a href="{{url("user-product-listing?category_id=$item->id")}}">{{ $item->name }}</a>
                                         </li>
                                         @endforeach
                                     </ul>
                                 </div>
-                                @foreach ($categories as $item)
+                                @foreach ($categoriesParent as $item)
                                 <div class="mega-column">
                                     <h4 class="mega-heading">{{ $item->name }}</h4>
                                     @foreach ($item->children as $item)
                                     <ul class="mega-item">
-                                        <li><a href="product-listing">{{ $item->name }}</a></li>
+                                        <li><a href="{{url("user-product-listing?category_id=$item->id")}}">{{ $item->name }}</a></li>
                                     </ul>
                                     @endforeach
                                 </div>
@@ -71,11 +71,11 @@
                     </li>
                     @auth
                     <li class="menu-item"><a href="{{ route('user-wishlist.index') }}">Wishlist</a></li>
+                    <li class="menu-item"><a href="{{ route('user-transaction.index') }}">Transaction</a></li>
                     @endauth
                     <li class="menu-item menu-item-has-children dropdown"><a href="#">Contact</a>
                         <ul class="sub-menu">
-                            <li class="menu-item"><a href="contact-us.html">Contact Us #1</a></li>
-                            <li class="menu-item"><a href="contact-us.html">Contact Us #2</a></li>
+                            <li class="menu-item"><a href="#footer">Contact Us</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -96,7 +96,7 @@
                             @foreach ($carts as $item)
                             <div class="ps-cart-item"><a class="ps-cart-item__close"
                                     onclick="deleteDataCart({{$item->id}})"></a>
-                                <div class="ps-cart-item__thumbnail"><a href="{{ route('user-product.show', $item->product->id) }}"></a><img
+                                <div class="ps-cart-item__thumbnail"><a href=" "></a><img
                                         src="{{ asset('images/cart-preview/1.jpg') }}" alt=""></div>
                                 <div class="ps-cart-item__content"><a class="ps-cart-item__title"
                                         href="{{ route('user-product.show', $item->product->id) }}">{{ $item->product->name }}</a>

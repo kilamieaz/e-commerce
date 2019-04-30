@@ -54,4 +54,9 @@ class Product extends Model
     {
         return '$ ' . $this->price;
     }
+
+    public function scopeFindByCategory($query, $category_id)
+    {
+        $query->where('category_id', $category_id);
+    }
 }

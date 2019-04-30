@@ -1,4 +1,4 @@
-<div class="ps-footer bg--cover" data-background="{{ asset('images/background/parallax.jpg') }}">
+<div class="ps-footer bg--cover" data-background="{{ asset('images2/background/parallax.jpg') }}" id="footer">
         <div class="ps-footer__content">
           <div class="ps-container">
             <div class="row">

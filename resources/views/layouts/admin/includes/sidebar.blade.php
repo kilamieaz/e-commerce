@@ -17,8 +17,8 @@
     </div>
 
     <!-- Nav Item - Dashboard -->
-    <li class="nav-item active">
-        <a class="nav-link" href="index.html">
+    <li class="nav-item">
+        <a class="nav-link" href="{{route('admin.dashboard')}}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
 
@@ -51,16 +51,17 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Options:</h6>
-                <a class="collapse-item" href="#">Products</a>
-                <a class="collapse-item" href="#">Categories</a>
-                <a class="collapse-item" href="#">Atributes</a>
+                <a class="collapse-item" href="{{route('product.index')}}">Products</a>
+                <a class="collapse-item" href="{{route('category.index')}}">Categories</a>
+                <a class="collapse-item" href="{{route('subcategory.index')}}">Sub Categories</a>
+                {{-- <a class="collapse-item" href="{{route('product.index')}}">Atributes</a> --}}
             </div>
         </div>
     </li>
 
     <!-- Nav Item - Utilities Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+        <a class="nav-link collapsed" href="{{route('user.index')}}" data-toggle="collapse" data-target="#collapseUtilities"
             aria-expanded="true" aria-controls="collapseUtilities">
             <i class="fas fa-fw fa-users"></i>
             <span>Customers</span>
@@ -69,8 +70,11 @@
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Options:</h6>
                 <a class="collapse-item" href="{{ route('user.index') }}">Customers</a>
-                <a class="collapse-item" href="#">Comments</a>
-                <a class="collapse-item" href="#">Transactions</a>
+                <a class="collapse-item" href="{{ route('comment.index') }}">Comments</a>
+                <a class="collapse-item" href="{{ route('reply.index') }}">Reply</a>
+                <a class="collapse-item" href="{{ route('cart.index') }}">Cart</a>
+                <a class="collapse-item" href="{{ route('wishlist.index') }}">Wishlist</a>
+                <a class="collapse-item" href="{{ route('transaction.index') }}">Transactions</a>
             </div>
         </div>
     </li>

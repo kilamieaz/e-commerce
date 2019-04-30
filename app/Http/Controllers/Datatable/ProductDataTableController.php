@@ -24,7 +24,8 @@ class ProductDataTableController extends Controller
             $row[] = $list->name;
             $row[] = $list->category->name;
             $row[] = $list->description;
-            $row[] = '<div class="text-center"><img style="height:50px; width:50px" src="' . Storage::url($list->image) . '"></div>';
+            // $row[] = '<div class="text-center"><img style="height:50px; width:50px" src="' . Storage::url($list->image) . '"></div>';
+            $row[] = '<div class="text-center"><img style="height:50px; width:50px" src="' . Storage::url('files/' . $list->image) . '"></div>';
             $row[] = $list->price;
             $row[] = $list->stock;
             $row[] = '<div class="text-center"><div class="btn-group">
