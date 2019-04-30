@@ -73,7 +73,7 @@
                     <li class="menu-item"><a href="{{ route('user-wishlist.index') }}">Wishlist</a></li>
                     <li class="menu-item"><a href="{{ route('user-transaction.index') }}">Transaction</a></li>
                     @endauth
-                    <li class="menu-item menu-item-has-children dropdown"><a href="#">Contact</a>
+                    <li class="menu-item menu-item-has-children dropdown"><a href="#footer">Contact</a>
                         <ul class="sub-menu">
                             <li class="menu-item"><a href="#footer">Contact Us</a></li>
                         </ul>

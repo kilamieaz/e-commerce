@@ -83,4 +83,14 @@ class User extends Authenticatable
     {
         return $this->email;
     }
+
+    public function role()
+    {
+        return $this->belongsTo(Role::class);
+    }
+
+    public function isAdministrator()
+    {
+        return $this->role()->where('id', '1')->exists();
+    }
 }

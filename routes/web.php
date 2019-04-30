@@ -13,7 +13,7 @@
 
 Auth::routes();
 
-Route::group(['middleware' => ['auth']], function () {
+Route::group(['middleware' => ['auth', 'role']], function () {
     Route::prefix('admin')->group(function () {
         Route::get('dashboard', function () {
             return view('admin.index');

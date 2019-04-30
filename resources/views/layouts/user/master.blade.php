@@ -128,6 +128,12 @@
             color: #222222;
         }
 
+        .preloader-gif {
+            width: 150px;
+            height: 150px;
+            /* margin-right: 1000px; */
+        }
+
     </style>
 </head>
 
@@ -136,7 +142,7 @@
         <div id="loader"></div>
 
     <div class="loader-section section-left"></div>
-    <div class="loader-section section-right"><img src="https://loading.io/spinners/fidget-spinner/index.fidget-spinner.gif"> Its loading..</div>
+    <div class="loader-section section-right"><img class="preloader-gif" src="{{asset('images/preloader/preloader.gif')}}"></div>
 
     </div>
     <!-- Header -->
