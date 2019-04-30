@@ -135,8 +135,8 @@
     <div id="loader-wrapper">
         <div id="loader"></div>
 
-        <div class="loader-section section-left"></div>
-        <div class="loader-section section-right"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"><img src="https://loading.io/spinners/fidget-spinner/index.fidget-spinner.gif"> Its loading..</div>
 
     </div>
     <!-- Header -->
