@@ -47,6 +47,9 @@ class AllSeeder extends Seeder
         $user_profile->phone_number = '0820123';
         $user_profile->save();
 
+        if (!file_exists(public_path('storage/files'))) {
+            mkdir(public_path('storage/files'), 0777, true);
+        }
         $client = new \GuzzleHttp\Client();
         $province = $client->request('GET', 'https://api.rajaongkir.com/starter/province', [
             'headers' => [
